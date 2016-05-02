@@ -1,22 +1,49 @@
 ﻿body {
-    padding-top: 50px;
     padding-bottom: 20px;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
+/*.body-content {
     padding-left: 15px;
     padding-right: 15px;
-}
+}*/
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
 .dl-horizontal dt {
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
+a.logo{
+    background: red/*url(../images/course_logo180x60.jpg) no-repeat */;
+    margin: auto;
+    width: 180px;
+    height: 150px;
+    display: block;
+    text-indent: -9999px;
+}
+
+.media-buttons{
+    position: fixed;
+    bottom: 25px;
+}
+
+.media-buttons li {
+    padding: 0.5em;
+    margin:auto;
+    text-decoration:none;
+    display:inline;
+}
+
+.media-buttons li a{
+    color: white;
+}
+
+.grow:hover{
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    -moz-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+}
+
 input,
 select,
 textarea {
