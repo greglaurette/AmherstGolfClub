@@ -18,11 +18,15 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #000;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    background: rgb(69,56,44);
+    background: -moz-linear-gradient(left,  rgba(69,56,44,1) 0%, rgba(110,90,72,1) 100%);
+    background: -webkit-linear-gradient(left,  rgba(69,56,44,1) 0%,rgba(110,90,72,1) 100%);
+    background: linear-gradient(to right,  rgba(69,56,44,1) 0%,rgba(110,90,72,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45382c', endColorstr='#6e5a48',GradientType=1 );
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -32,7 +36,6 @@
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 15px;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -59,7 +62,9 @@
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999999;
+    color: #40ce04;
+    font-size: 18px;
+    text-shadow: 2px 2px #000;
 }
 
 .sidebar-nav li a:hover {
@@ -73,15 +78,6 @@
     text-decoration: none;
 }
 
-.sidebar-nav > .sidebar-brand {
-    height: 65px;
-    font-size: 18px;
-    line-height: 60px;
-}
-
-.sidebar-nav > .sidebar-brand a {
-    color: #999999;
-}
 
 /*.sidebar-nav > .sidebar-brand a:hover {
     color: #fff;

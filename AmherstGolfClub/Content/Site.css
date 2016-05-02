@@ -36,12 +36,24 @@ a.logo{
     color: white;
 }
 
+.phone-number{
+    padding-left: 20px;
+    color: #000;
+    position: fixed;
+    font-size:30px;
+    bottom: 90px;
+}
+
 .grow:hover{
     -webkit-transform: scale(2);
     -ms-transform: scale(2);
     -moz-transform: scale(2);
     -o-transform: scale(2);
     transform: scale(2);
+}
+
+footer{
+    padding-left: 10px;
 }
 
 input,
