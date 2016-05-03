@@ -2,46 +2,29 @@
     padding-bottom: 20px;
 }
 
-/*.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}*/
+.body-content {
+    padding-left:109px;
+    max-width: 80%; 
+}
 
 .dl-horizontal dt {
     white-space: normal;
 }
 
-a.logo{
-    background: red/*url(../images/course_logo180x60.jpg) no-repeat */;
-    margin: auto;
-    width: 180px;
-    height: 150px;
-    display: block;
-    text-indent: -9999px;
-}
-
 .media-buttons{
-    position: fixed;
-    bottom: 25px;
+    position: relative;
+    left: 300px;
 }
 
 .media-buttons li {
-    padding: 0.5em;
+    padding: 10px;
     margin:auto;
     text-decoration:none;
     display:inline;
 }
 
 .media-buttons li a{
-    color: white;
-}
-
-.phone-number{
-    padding-left: 20px;
     color: #000;
-    position: fixed;
-    font-size:30px;
-    bottom: 90px;
 }
 
 .grow:hover{
@@ -60,4 +43,8 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+@media (max-width){
+
 }

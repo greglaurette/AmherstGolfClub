@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title | Amherst Golf Club</title>
     <link href="~/Content/sidebar.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     @Styles.Render("~/Content/css")
@@ -11,58 +11,58 @@
     
 </head>
 <body>
-    <div id="wrapper">
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">                                    
-                    @Html.ActionLink("Home", "Index", null, new { @class="logo"})                
+    <div class="nav-side-menu">
+        <div class="brand">
+            <a href="#">
+                <img src="~/images/course_logo180x60.jpg" alt="logo" />
+            </a>
+        </div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+        <div class="menu-list">
+
+            <ul id="menu-content" class="menu-content collapse out">
                 <li>
                     @Html.ActionLink("Course (About)", "About", "Home")
                 </li>
-                <li>
-                    @Html.ActionLink("Rates", "Index", "Rates")
+
+                <li data-toggle="collapse" data-target="#products" class="collapsed active">
+                    <a href="#">Rates <span class="arrow"></span></a>
                 </li>
-                <li>
-                    @Html.ActionLink("Pro Shop", "Index", "Shop")
-                </li>
-                <li>
-                    @Html.ActionLink("Tournaments", "Index", "Tournaments")
-                </li>
-                <li>
-                    @Html.ActionLink("Member Information", "Index", "MemberInfo")
-                </li>
-                <li>
-                    @Html.ActionLink("Kitchen & Bar", "Index", "Kitchen")
-                </li>
-                <li>
-                    @Html.ActionLink("Gallery", "Index", "Gallery")
-                </li>
-                <li>
-                    @Html.ActionLink("Reservation", "Index", "Reserv")
-                </li>                
+                <ul class="sub-menu collapse" id="products">
+                    <li><a href="#">Membership</a></li>
+                    <li><a href="#">Driving Range</a></li>
+                    <li><a href="#">Green Fee</a></li>
+                    <li><a href="#">Corporate Package</a></li>
+                </ul>
+                <li>@Html.ActionLink("Pro Shop", "Index", "Shop")</li>
+                <li>@Html.ActionLink("Tournaments", "Index", "Tournaments")</li>
+                <li>@Html.ActionLink("Member Information", "Index", "MemberInfo")</li>
+                <li>@Html.ActionLink("Kitchen & Bar", "Index", "Kitchen")</li>
+                <li>@Html.ActionLink("Gallery", "Index", "Gallery")</li>
+                <li>@Html.ActionLink("Reservation", "Index", "Reserv")</li>
             </ul>
-
-            <p class="phone-number">(902) 667-1911</p>
-
-            <ul class="media-buttons">
-                <li><a href="#"><i class="fa fa-facebook-official fa-lg grow"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter-square fa-lg grow"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus-square fa-lg grow"></i></a></li>
-                <li><a href="#"><i class="fa fa-tripadvisor fa-lg grow"></i></a></li>
-                <li><a href="#"><i class="fa fa-flag fa-lg grow"></i></a></li>
-            </ul>
-        </div>
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>
-                    &copy; @DateTime.Now.Year - Amherst Golf Club | All Rights Reserved.
-                    @Html.Partial("_LoginPartial")
-                </p>
-
-            </footer>
-        </div>
+         </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+                <div class="row">
+                    <div class="col-md-6">
+                        &copy; @DateTime.Now.Year - Amherst Golf Club | All Rights Reserved.
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="media-buttons">
+                            <li><a href="https://www.facebook.com/Amherst-Golf-Club-308349132533482/"><i class="fa fa-facebook-official fa-lg grow"></i></a></li>
+                            <li><a href="https://twitter.com/AmherstGolf"><i class="fa fa-twitter-square fa-lg grow"></i></a></li>
+                            <li><a href="https://plus.google.com/+AmherstGolfClubNS"><i class="fa fa-google-plus-square fa-lg grow"></i></a></li>
+                            <li><a href="https://www.tripadvisor.ca/Attraction_Review-g182200-d4418032-Reviews-Amherst_Golf_Club-Amherst_Nova_Scotia.html"><i class="fa fa-tripadvisor fa-lg grow"></i></a></li>
+                            <li><a href="http://golfcanada.ca/"><i class="fa fa-flag fa-lg grow"></i></a></li>
+                        </ul>
+                    </div>
+            </div>
+        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
