@@ -3,6 +3,7 @@
 }
 
 .body-content {
+    padding-top:10px;
     padding-left:109px;
     max-width: 80%; 
 }
@@ -24,7 +25,14 @@
 }
 
 .media-buttons li a{
+    font-size:150%;
     color: #000;
+}
+
+.reserve{
+    position:relative;    
+    bottom: 1%;
+    left:45%;
 }
 
 .grow:hover{
