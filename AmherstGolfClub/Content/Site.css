@@ -5,16 +5,21 @@
 .body-content {
     padding-top:10px;
     padding-left:109px;
-    max-width: 80%; 
+    max-width: 85%; 
 }
 
 .dl-horizontal dt {
     white-space: normal;
 }
 
+/************************************ABOUT TABLE******************************************/
+
+
+/************************************SOCIAL MEDIA BUTTONS******************************************/
 .media-buttons{
     position: relative;
-    left: 300px;
+    padding-top: 2%;
+    left: 200px;
 }
 
 .media-buttons li {
@@ -26,13 +31,11 @@
 
 .media-buttons li a{
     font-size:150%;
-    color: #000;
+    color: #848a48;
 }
 
 .reserve{
-    position:relative;    
-    bottom: 1%;
-    left:45%;
+    display:inline-block;
 }
 
 .grow:hover{
@@ -43,8 +46,14 @@
     transform: scale(2);
 }
 
+/************************************FOOTER******************************************/
 footer{
-    padding-left: 10px;
+    width:1100px;
+    border-top: 2px solid rgba(81, 80, 80, 0.76);
+}
+
+footer p{
+    padding-top:2%;
 }
 
 input,

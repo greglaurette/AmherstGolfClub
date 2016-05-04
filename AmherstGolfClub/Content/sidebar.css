@@ -103,6 +103,13 @@
   -ms-transition: all 1s ease;
   transition: all 1s ease;
 }
+.nav-side-menu a li{
+    padding-left: 10px;
+    color:#e1ffff;
+}
+.nav-side-menu a:hover{
+    text-decoration:none;
+}
 @media (max-width: 767px) {
   .nav-side-menu {
     position: relative;

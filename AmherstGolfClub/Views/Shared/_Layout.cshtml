@@ -13,7 +13,7 @@
 <body>
     <div class="nav-side-menu">
         <div class="brand">
-            <a href="#">
+            <a href='@Url.Action("Index", "Home")'>
                 <img src="~/images/course_logo180x60.jpg" alt="logo" />
             </a>
         </div>
@@ -22,35 +22,35 @@
         <div class="menu-list">
 
             <ul id="menu-content" class="menu-content collapse out">
-                <li>
-                    @Html.ActionLink("Course (About)", "About", "Home")
-                </li>
+                    <a href='@Url.Action("About", "Home")' title="About us"><li>About</li></a>
 
-                <li data-toggle="collapse" data-target="#products" class="collapsed active">
+                <li data-toggle="collapse" data-target="#products" class="collapsed">
                     <a href="#">Rates <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="products">
-                    <li><a href="#">Membership</a></li>
-                    <li><a href="#">Driving Range</a></li>
-                    <li><a href="#">Green Fee</a></li>
-                    <li><a href="#">Corporate Package</a></li>
+                    <a href='@Url.Action("RatesMain", "Rates")' title="General Rates"><li>General Rates</li></a>
+                    <a href='@Url.Action("Membership", "Rates")' title="Membership"><li>Membership</li></a>
+                    <a href='@Url.Action("DrivingRange", "Rates")' title="Driving Range"><li>Driving Range</li></a>
+                    <a href='@Url.Action("GreenFee", "Rates")' title="Green Fee"><li>Green Fee</li></a>
+                    <a href='@Url.Action("Corp", "Rates")' title="Corporate Package"><li>Corporate Package</li></a>
                 </ul>
-                <li>@Html.ActionLink("Pro Shop", "Index", "Shop")</li>
-                <li>@Html.ActionLink("Tournaments", "Index", "Tournaments")</li>
-                <li>@Html.ActionLink("Member Information", "Index", "MemberInfo")</li>
-                <li>@Html.ActionLink("Kitchen & Bar", "Index", "Kitchen")</li>
-                <li>@Html.ActionLink("Gallery", "Index", "Gallery")</li>
-                <li>@Html.ActionLink("Reservation", "Index", "Reserv")</li>
+                <a href='@Url.Action("Index", "ProShop")' title="Pro Shop"><li>Pro Shop</li></a>
+                <a href='@Url.Action("Index", "Tournaments")' title="Tournaments"><li>Tournaments</li></a>
+                <a href='@Url.Action("Index", "MemberInfo")' title="Member Information"><li>Member Information</li></a>
+                <a href='@Url.Action("Index", "Kitchen")' title="Kitchen & Bar"><li>Kitchen &amp; Bar</li></a>
+                <a href='@Url.Action("Index", "Gallery")' title="View Gallery"><li>Gallery</li></a>
+                <a href='@Url.Action("Index", "Reserv")' title="Make a Reservation"><li>Make a Reservation</li></a>
             </ul>
          </div>
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
+        <br />
+
         <footer>
-                <div class="row">
+            <div class="row">
                     <div class="col-md-6">
-                        &copy; @DateTime.Now.Year - Amherst Golf Club | All Rights Reserved.
+                        <p>&copy; @DateTime.Now.Year - Amherst Golf Club | All Rights Reserved.</p>
                     </div>
                     <div class="col-md-6">
                         <ul class="media-buttons">

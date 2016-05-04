@@ -9,7 +9,23 @@ namespace AmherstGolfClub.Controllers
     public class RatesController : Controller
     {
         // GET: Rates
-        public ActionResult Index()
+        public ActionResult RatesMain()
+        {
+            return View();
+        }
+        public ActionResult DrivingRange()
+        {
+            return View();
+        }
+        public ActionResult GreenFee()
+        {
+            return View();
+        }
+        public ActionResult Membership()
+        {
+            return View();
+        }
+        public ActionResult Corp()
         {
             return View();
         }

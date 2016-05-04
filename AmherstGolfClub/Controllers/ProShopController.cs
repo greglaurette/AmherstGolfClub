@@ -11,6 +11,8 @@ namespace AmherstGolfClub.Controllers
         // GET: ProShop
         public ActionResult Index()
         {
+            ViewBag.Message = "Welcome to the Pro Shop!";
+
             return View();
         }
     }
