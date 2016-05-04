@@ -47,6 +47,30 @@
         @RenderBody()
         <br />
 
+        <div class="container">
+            <table style="width:100%;" cellpadding="15" border="0">
+                <tbody id="table-footer">
+                    <tr>
+                        <td id="reserve-now">
+                            <h3>Book today through GolfNow reservations.</h3>
+                            <p>Tee Times can only be booked online 2 days in advance. For more advanced bookings please call us at (902) 667-1911.</p>
+                            <p><button type="button" class="btn btn-md btn-primary" data-toggle="modal" data-target="#bookTeeTime">Make a reservation</button></p>
+                        </td>
+                        <td id="in-touch">
+                            <h3>Stay in touch</h3>
+                            <p>Join our mailing list to be notified of events and special offers.</p>
+                            <p><a class="btn btn-md btn-primary" href='@Url.Action("Mailing", "Home")'>Join now</a></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            <div id="bookTeeTime" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <iframe align="middle" frameborder="0" height="550" id="fcontent" scrolling="yes" src="https://golf.teeitup.com/244393" width="950"></iframe>
+                </div>
+            </div>   
+        <br />
         <footer>
             <div class="row">
                     <div class="col-md-6">

@@ -34,10 +34,6 @@
     color: #848a48;
 }
 
-.reserve{
-    display:inline-block;
-}
-
 .grow:hover{
     -webkit-transform: scale(2);
     -ms-transform: scale(2);
@@ -54,6 +50,19 @@ footer{
 
 footer p{
     padding-top:2%;
+}
+
+#in-touch{
+    background-color: #6e5a48;
+}
+
+#reserve-now{
+    background-color: #848a48;
+}
+
+#table-footer{
+    font-weight:bold;
+    font-size:110%;
 }
 
 input,
