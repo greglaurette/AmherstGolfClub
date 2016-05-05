@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -26,11 +26,6 @@ namespace AmherstGolfClub.DAL
                 //base.OnModelCreating(modelBuilder);
                 modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
-                /* Using Fluent API
-                 *  Take care of many to many relationships between instructor and course entities
-                 *  EF Code Firt can configure this for us, but if we do not override the names
-                 *  we will get mappings such as InstructorInstructorID for the InstructorID column
-                 */
                 modelBuilder.Entity<Course>().HasMany(c => c.Instructors).WithMany(i => i.Courses).Map(t => t.MapLeftKey("CourseID").MapRightKey("InstructorID").ToTable("CourseInstructor"));
                 //Above will create a junction (bridging) table called
                 //CourseInstructor
@@ -40,4 +35,4 @@ namespace AmherstGolfClub.DAL
 
         }
     
-}
+}*/

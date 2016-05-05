@@ -3,8 +3,8 @@
 }
 
 .body-content {
-    padding-top:10px;
     padding-left:109px;
+    margin-left: 100px;
     max-width: 85%; 
 }
 
@@ -71,6 +71,10 @@ textarea {
     max-width: 280px;
 }
 
-@media (max-width){
-
+@media (max-width: 767px) {
+  .body-content{
+      max-width:85%;
+      margin:auto;
+      padding: 0;
+  }
 }

@@ -35,7 +35,7 @@
         <div class="menu-list">
 
             <ul id="menu-content" class="menu-content collapse out">
-                    <a href='@Url.Action("About", "Home")' title="About us"><li>About</li></a>
+                <a href='@Url.Action("About", "Home")' title="About us"><li>About</li></a>
 
                 <li data-toggle="collapse" data-target="#products" class="collapsed">
                     <a href="#">Rates <span class="arrow"></span></a>
@@ -54,9 +54,11 @@
                 <a href='@Url.Action("Index", "Gallery")' title="View Gallery"><li>Gallery</li></a>
                 <a href='@Url.Action("Index", "Reserv")' title="Make a Reservation"><li>Make a Reservation</li></a>
             </ul>
-         </div>
+        </div>        
     </div>
     <div class="container body-content">
+        <div class="row"><p>@Html.Partial("_LoginPartial")</p></div>
+        
         @RenderBody()
         <br />
 
@@ -77,27 +79,27 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div id="bookTeeTime" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <iframe align="middle" frameborder="0" height="550" id="fcontent" scrolling="yes" src="https://golf.teeitup.com/244393" width="950"></iframe>
             </div>
-            <div id="bookTeeTime" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-                    <iframe align="middle" frameborder="0" height="550" id="fcontent" scrolling="yes" src="https://golf.teeitup.com/244393" width="950"></iframe>
-                </div>
-            </div>   
+        </div>
         <br />
         <footer>
             <div class="row">
-                    <div class="col-md-6">
-                        <p>&copy; @DateTime.Now.Year - Amherst Golf Club | All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="media-buttons">
-                            <li><a href="https://www.facebook.com/Amherst-Golf-Club-308349132533482/"><i class="fa fa-facebook-official fa-lg grow"></i></a></li>
-                            <li><a href="https://twitter.com/AmherstGolf"><i class="fa fa-twitter-square fa-lg grow"></i></a></li>
-                            <li><a href="https://plus.google.com/+AmherstGolfClubNS"><i class="fa fa-google-plus-square fa-lg grow"></i></a></li>
-                            <li><a href="https://www.tripadvisor.ca/Attraction_Review-g182200-d4418032-Reviews-Amherst_Golf_Club-Amherst_Nova_Scotia.html"><i class="fa fa-tripadvisor fa-lg grow"></i></a></li>
-                            <li><a href="http://golfcanada.ca/"><i class="fa fa-flag fa-lg grow"></i></a></li>
-                        </ul>
-                    </div>
+                <div class="col-md-6">
+                    <p>&copy; @DateTime.Now.Year - Amherst Golf Club | All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="media-buttons">
+                        <li><a href="https://www.facebook.com/Amherst-Golf-Club-308349132533482/"><i class="fa fa-facebook-official fa-lg grow"></i></a></li>
+                        <li><a href="https://twitter.com/AmherstGolf"><i class="fa fa-twitter-square fa-lg grow"></i></a></li>
+                        <li><a href="https://plus.google.com/+AmherstGolfClubNS"><i class="fa fa-google-plus-square fa-lg grow"></i></a></li>
+                        <li><a href="https://www.tripadvisor.ca/Attraction_Review-g182200-d4418032-Reviews-Amherst_Golf_Club-Amherst_Nova_Scotia.html"><i class="fa fa-tripadvisor fa-lg grow"></i></a></li>
+                        <li><a href="http://golfcanada.ca/"><i class="fa fa-flag fa-lg grow"></i></a></li>
+                    </ul>
+                </div>
             </div>
         </footer>
     </div>
@@ -105,6 +107,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
-   
+
 </body>
 </html>
