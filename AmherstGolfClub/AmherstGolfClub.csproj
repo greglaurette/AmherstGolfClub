@@ -305,8 +305,7 @@
     <Content Include="Views\ProShop\Index.cshtml" />
     <Content Include="Views\Rates\RatesMain.cshtml" />
     <Content Include="Views\Rates\Membership.cshtml" />
-    <Content Include="Views\Rates\DrivingRange.cshtml" />
-    <Content Include="Views\Rates\GreenFee.cshtml" />
+    <Content Include="Views\Rates\GeneralRates.cshtml" />
     <Content Include="Views\Rates\Corp.cshtml" />
   </ItemGroup>
   <ItemGroup>

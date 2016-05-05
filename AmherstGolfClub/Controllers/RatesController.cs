@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -8,16 +9,11 @@ namespace AmherstGolfClub.Controllers
 {
     public class RatesController : Controller
     {
-        // GET: Rates
         public ActionResult RatesMain()
         {
             return View();
         }
-        public ActionResult DrivingRange()
-        {
-            return View();
-        }
-        public ActionResult GreenFee()
+        public ActionResult GeneralRates()
         {
             return View();
         }

@@ -41,10 +41,9 @@
                     <a href="#">Rates <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="products">
-                    <a href='@Url.Action("RatesMain", "Rates")' title="General Rates"><li>General Rates</li></a>
+                    <a href='@Url.Action("GeneralRates", "Rates")' title="General Rates"><li>General Rates</li></a>
                     <a href='@Url.Action("Membership", "Rates")' title="Membership"><li>Membership</li></a>
-                    <a href='@Url.Action("DrivingRange", "Rates")' title="Driving Range"><li>Driving Range</li></a>
-                    <a href='@Url.Action("GreenFee", "Rates")' title="Green Fee"><li>Green Fee</li></a>
+                    <a href='@Url.Action("ShopRentals", "Rates")' title="Pro Shop Rentals"><li>Pro Shop Rentals</li></a>
                     <a href='@Url.Action("Corp", "Rates")' title="Corporate Package"><li>Corporate Package</li></a>
                 </ul>
                 <a href='@Url.Action("Index", "ProShop")' title="Pro Shop"><li>Pro Shop</li></a>
@@ -54,11 +53,11 @@
                 <a href='@Url.Action("Index", "Gallery")' title="View Gallery"><li>Gallery</li></a>
                 <a href='@Url.Action("Index", "Reserv")' title="Make a Reservation"><li>Make a Reservation</li></a>
             </ul>
-        </div>        
+        </div>
     </div>
     <div class="container body-content">
         <div class="row"><p>@Html.Partial("_LoginPartial")</p></div>
-        
+
         @RenderBody()
         <br />
 
@@ -85,7 +84,7 @@
                 <iframe align="middle" frameborder="0" height="550" id="fcontent" scrolling="yes" src="https://golf.teeitup.com/244393" width="950"></iframe>
             </div>
         </div>
-        <br />
+        <hr />
         <footer>
             <div class="row">
                 <div class="col-md-6">
