@@ -321,6 +321,38 @@ namespace AmherstGolfClub.Controllers
             var result = await UserManager.AddLoginAsync(User.Identity.GetUserId(), loginInfo.Login);
             return result.Succeeded ? RedirectToAction("ManageLogins") : RedirectToAction("ManageLogins", new { Message = ManageMessageId.Error });
         }
+        public ActionResult UserInfo()
+        {
+            var user = UserManager.FindById(User.Identity.GetUserId());
+            if (user == null)
+                return View("Error");
+            return View(user);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult UserInfo(ApplicationUser UpdatedUser)
+        {
+            if (!ModelState.IsValid)
+                return View(UpdatedUser);
+
+            var SavedUser = UserManager.FindById(UpdatedUser.Id);
+            if (SavedUser == null)
+                return View("Error");
+            SavedUser.FirstName = UpdatedUser.FirstName;
+            SavedUser.LastName = UpdatedUser.LastName;
+            SavedUser.Address = UpdatedUser.Address;
+            SavedUser.City = UpdatedUser.City;
+            SavedUser.Province = UpdatedUser.Province;
+            SavedUser.PostalCode = UpdatedUser.PostalCode;
+            SavedUser.HomeClub = UpdatedUser.HomeClub;
+            SavedUser.DateOfBirth = UpdatedUser.DateOfBirth;
+
+            UserManager.Update(SavedUser);
+
+            return RedirectToAction("Index", "Manage");
+        }
+
 
         protected override void Dispose(bool disposing)
         {
