@@ -11,7 +11,10 @@
     white-space: normal;
 }
 
-/************************************ABOUT TABLE******************************************/
+.rental-headers{
+    font-weight:bold;
+    font-size:20px;
+}
 
 
 /************************************SOCIAL MEDIA BUTTONS******************************************/
@@ -63,6 +66,15 @@ footer p{
     font-size:110%;
 }
 
+.carousel-pic{
+    width:100%;
+}
+
+.carousel-inner{
+    width:100%;
+    max-height:600px !important;
+}
+
 input,
 select,
 textarea {
@@ -74,5 +86,9 @@ textarea {
       max-width:85%;
       margin:auto;
       padding: 0;
+  }
+
+  .carousel-inner{
+      max-height:0;
   }
 }

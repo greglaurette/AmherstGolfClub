@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -15,7 +15,7 @@ namespace AmherstGolfClub.Controllers
             return View();
         }
 
-        public ActionResult Details(int? id)
+        /*public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -27,7 +27,7 @@ namespace AmherstGolfClub.Controllers
                 return HttpNotFound();
             }
             return View(tourny);
-        }
+        }*/
 
     }
-}*/
+}

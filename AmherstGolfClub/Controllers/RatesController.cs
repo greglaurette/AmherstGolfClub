@@ -9,7 +9,7 @@ namespace AmherstGolfClub.Controllers
 {
     public class RatesController : Controller
     {
-        public ActionResult RatesMain()
+        public ActionResult ShopRentals()
         {
             return View();
         }
