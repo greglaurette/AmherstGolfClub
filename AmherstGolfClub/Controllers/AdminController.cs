@@ -49,10 +49,10 @@ namespace AmherstGolfClub.Controllers
                         product.SubDepartment = csv.GetField<string>(7);
                         product.ItemCategory = csv.GetField<string>(8);                        
                         ProductsToDisplay.Add(product);
-                        var exists = db.Product.Where(int.Parse(csv.GetField<string>(1)) == product.ProductID).SingleOrDefault();
+                        var exists = db.Products.Where(i=>i.ProductID == product.ProductID).SingleOrDefault();
                         if (exists == null)
                         {
-                            db.Product.Add(product);
+                            db.Products.Add(product);
                             db.SaveChanges();
                             count += 1;
                         }
