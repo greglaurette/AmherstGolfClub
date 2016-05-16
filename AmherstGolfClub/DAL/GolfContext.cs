@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AmherstGolfClub.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -10,6 +11,8 @@ namespace AmherstGolfClub.DAL
     {
         public GolfContext() : base("DefaultConnection") { }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<Rates> Rate { get; set; }
+        public DbSet<Tournament> Tournaments { get; set; }
+        public DbSet<TournamentPlayers> Players { get; set; }
     }
 }
