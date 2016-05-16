@@ -8,6 +8,8 @@ namespace AmherstGolfClub.Models
 {
     public class TournamentPlayers
     {
+        public virtual Tournament Tournament { get; set; }
+
         [Required]
         public int PlayersID { get; set; }
 
