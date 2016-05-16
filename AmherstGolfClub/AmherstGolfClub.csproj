@@ -207,23 +207,14 @@
     <Compile Include="Controllers\ProShopController.cs" />
     <Compile Include="Controllers\RatesController.cs" />
     <Compile Include="Controllers\TournamentController.cs" />
+    <Compile Include="DAL\GolfContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201605041611167_InitialCreate.cs" />
-    <Compile Include="Migrations\201605041611167_InitialCreate.Designer.cs">
-      <DependentUpon>201605041611167_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605091745342_firstMig.cs" />
-    <Compile Include="Migrations\201605091745342_firstMig.Designer.cs">
-      <DependentUpon>201605091745342_firstMig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CanadianProvinces.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -337,14 +328,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201605041611167_InitialCreate.resx">
-      <DependentUpon>201605041611167_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605091745342_firstMig.resx">
-      <DependentUpon>201605091745342_firstMig.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
