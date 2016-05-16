@@ -263,6 +263,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="manifest.json" />
+    <Content Include="PDF\amherst_golf_club_by_laws.pdf" />
+    <Content Include="PDF\amherst-member-manual.pdf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -314,9 +316,9 @@
     <Content Include="Views\MemberInfo\Index.cshtml" />
     <Content Include="Views\Reserv\Index.cshtml" />
     <Content Include="Views\Shop\Index.cshtml" />
-    <Content Include="Views\Tournaments\Index.cshtml" />
+    <Content Include="Views\Tournament\Index.cshtml" />
     <Content Include="Views\ProShop\Index.cshtml" />
-    <Content Include="Views\Rates\RatesMain.cshtml" />
+    <Content Include="Views\Rates\ShopRentals.cshtml" />
     <Content Include="Views\Rates\Membership.cshtml" />
     <Content Include="Views\Rates\GeneralRates.cshtml" />
     <Content Include="Views\Rates\Corp.cshtml" />
@@ -327,7 +329,6 @@
     <Folder Include="images\" />
     <Folder Include="upload\" />
     <Folder Include="Views\Admin\" />
-    <Folder Include="Views\Tournament\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
