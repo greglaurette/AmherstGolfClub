@@ -19,12 +19,13 @@ namespace AmherstGolfClub.Models
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }
 
-        public int Quantity { get; set; } 
-               
-        public string SubDepartment{ get; set; } 
+        [Required]
+        public int Quantity { get; set; }
 
+        [Required]
+        public string SubDepartment { get; set; }
+
+        [Required]
         public string ItemCategory { get; set; }
-        
-        
     }
 }
