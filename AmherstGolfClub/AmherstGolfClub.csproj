@@ -317,17 +317,19 @@
     <Content Include="Views\MemberInfo\Index.cshtml" />
     <Content Include="Views\Reserv\Index.cshtml" />
     <Content Include="Views\Shop\Index.cshtml" />
-    <Content Include="Views\Tournament\Index.cshtml" />
     <Content Include="Views\ProShop\Index.cshtml" />
     <Content Include="Views\Rates\ShopRentals.cshtml" />
     <Content Include="Views\Rates\Membership.cshtml" />
     <Content Include="Views\Rates\GeneralRates.cshtml" />
     <Content Include="Views\Rates\Corp.cshtml" />
     <Content Include="Views\Manage\UserInfo.cshtml" />
+    <Content Include="Views\Tournament\Details.cshtml" />
+    <Content Include="Views\Tournament\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="images\" />
+    <Folder Include="TournyFiles\" />
     <Folder Include="upload\" />
     <Folder Include="Views\Admin\" />
   </ItemGroup>

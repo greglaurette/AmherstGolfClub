@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AmherstGolfClub.Models;
+using AmherstGolfClub.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,25 +11,26 @@ namespace AmherstGolfClub.Controllers
 {
     public class TournamentController : Controller
     {
+        GolfContext db = new GolfContext();
         // GET: Tournament
         public ActionResult Index()
         {
-            return View();
+            return View(db.Tournaments.ToList());
         }
 
-        /*public ActionResult Details(int? id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Tournament tourny = db.Tournament.Find(id);
+            Tournament tourny = db.Tournaments.Find(id);
             if (tourny == null)
             {
                 return HttpNotFound();
             }
             return View(tourny);
-        }*/
+        }
 
     }
 }
