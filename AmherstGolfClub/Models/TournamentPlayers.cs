@@ -11,7 +11,7 @@ namespace AmherstGolfClub.Models
         public virtual Tournament Tournament { get; set; }
 
         [Required]
-        public int PlayersID { get; set; }
+        public int TournamentPlayersID { get; set; }
 
         [Required]
         [Display(Name = "First Name")]
