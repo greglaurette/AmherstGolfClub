@@ -1,4 +1,5 @@
-﻿@{
+﻿@model AmherstGolfClub.Models.ContactForm
+@{
     ViewBag.Title = "Contact";
 }
 <h2>@ViewBag.Title</h2>
@@ -40,6 +41,40 @@
     </div>
 </div>
 <hr />
+<div class="container">
+    <h1>Send A Message</h1>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <div class="row">
+            @Html.LabelFor(model => model.emailName, "Name:")
+            @Html.EditorFor(model => model.emailName)
+            @Html.ValidationMessageFor(model => model.emailName)
+        </div>
+        <div class="row">
+            @Html.LabelFor(model => model.emailSubject, "Subject:")
+            @Html.EditorFor(model => model.emailSubject)
+            @Html.ValidationMessageFor(model => model.emailSubject)
+        </div>
+        <div class="row">
+            @Html.LabelFor(model => model.emailAddress, "Email:")
+            @Html.EditorFor(model => model.emailAddress)
+            @Html.ValidationMessageFor(model => model.emailAddress)
+        </div>
+        <div class="row">
+            @Html.LabelFor(model => model.emailMessage, "Message:")
+            @Html.TextAreaFor(model => model.emailMessage)
+            @Html.ValidationMessageFor(model => model.emailMessage)
+        </div>
+        <div class="buttons">
+            <div class="row">
+                <input type="submit" value="submit" />
+                <input type="reset" value="reset" />
+            </div>
+        </div>
+    }
+</div>
 <div class="container">
     <table class="table table-striped">
         <tr>
