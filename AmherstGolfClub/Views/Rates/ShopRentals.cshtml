@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<AmherstGolfClub.Models.Rates>
 @{
     ViewBag.Title = "ShopRentals";
 }
@@ -10,89 +10,33 @@
             <tr>
                 <td class="rental-headers">Daily Rentals. HST not included</td>
             </tr>
-            <tr>
-                <td>Club Rentals</td>
-                <td>$17.35</td>
-            </tr>
-            <tr>
-                <td>Pull Carts</td>
-                <td>$6.95</td>
-            </tr>
-            <tr>
-                <td>Executive Club Rental</td>
-                <td>$40.00</td>
-            </tr>
-            <tr>
-                <td>Power Cart Rental</td>
-                <td>$33.91</td>
-            </tr>
-            <tr>
-                <td>Power Cart Rental - Member</td>
-                <td>$30.44</td>
-            </tr>
-            <tr>
-                <td>Power Cart Rental - 9 Holes</td>
-                <td>$18.26</td>
-            </tr>
-
+            @foreach (var item in Model.Where(item => item.RatesID > 24 && item.RatesID < 31))
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                    <td>$ @Html.DisplayFor(modelItem => item.Rate)</td>
+                </tr>
+            }
             <tr>
                 <td class="rental-headers">Yearly Rentals. HST not included</td>
             </tr>
+           @foreach (var item in Model.Where(item => item.RatesID > 30 && item.RatesID < 39))
+            {
             <tr>
-                <td>Carts on course. Includes storage</td>
-                <td>$305.95</td>
+                <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                <td>$ @Html.DisplayFor(modelItem => item.Rate)</td>
             </tr>
-            <tr>
-                <td>Carts off course. No storage</td>
-                <td>$227.95</td>
-            </tr>
-            <tr>
-                <td>Pull Cart Storage</td>
-                <td>$51.30</td>
-            </tr>
-            <tr>
-                <td>Pull Cart Rental</td>
-                <td>$42.61</td>
-            </tr>
-            <tr>
-                <td>Push Cart and Power Caddie Storage</td>
-                <td>$51.30</td>
-            </tr>
-            <tr>
-                <td>Locker Rental</td>
-                <td>$42.61</td>
-            </tr>
-            <tr>
-                <td>Club Storage and Cleaning</td>
-                <td>$104.95</td>
-            </tr>
-            <tr>
-                <td>Club Storage, Range Membership, &amp; Locker</td>
-                <td>$239.95</td>
-            </tr>
+           }
             <tr>
                 <td class="rental-headers">Power Cart Rental - Prepaid Storages&sup1;</td>
             </tr>
-            <tr>
-                <td>10 Round Packages</td>
-                <td>$237.00</td>
-            </tr>
-            <tr>
-                <td>20 Round Packages</td>
-                <td>$428.64</td>
-            </tr>
-            <tr>
-                <td>30 Round Packages</td>
-                <td>$553.04</td>
-            </tr>
-            <tr>
-                <td>Unlimited Package&sup2; - 1 Person</td>
-                <td>$651.30</td>
-            </tr>
-            <tr>
-                <td>Unlimited Package - 2 Person&sup3;</td>
-                <td>$781.74</td>
-            </tr>
+            @foreach (var item in Model.Where(item => item.RatesID > 38 && item.RatesID < 44))
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                    <td>$ @Html.DisplayFor(modelItem => item.Rate)</td>
+                </tr>
+            }
         </tbody>
     </table>
     <p>&sup1;&nbsp;Pre-paid rentals must state when booking tee times if they require a cart, a cart will not be automatically booked. Reservations will be taken 2 days in advance.</p>

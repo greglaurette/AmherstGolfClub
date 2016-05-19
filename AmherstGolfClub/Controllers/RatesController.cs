@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AmherstGolfClub.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,17 +10,19 @@ namespace AmherstGolfClub.Controllers
 {
     public class RatesController : Controller
     {
+        private GolfContext db = new GolfContext();
+
         public ActionResult ShopRentals()
         {
-            return View();
+            return View(db.Rate.ToList());
         }
         public ActionResult GeneralRates()
         {
-            return View();
+            return View(db.Rate.ToList());
         }
         public ActionResult Membership()
         {
-            return View();
+            return View(db.Rate.ToList());
         }
         public ActionResult Corp()
         {

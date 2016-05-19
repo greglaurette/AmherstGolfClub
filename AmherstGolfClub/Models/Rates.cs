@@ -14,8 +14,8 @@ namespace AmherstGolfClub.Models
         [Required]        
         public string Description { get; set; }
         
-        public decimal Rate { get; set; }
+        public decimal Rate { get; set; } //not required because not all rates have prices
 
-        public string TimeFrame { get; set; }
+        public string TimeFrame { get; set; } //inplace of rate
     }
 }
