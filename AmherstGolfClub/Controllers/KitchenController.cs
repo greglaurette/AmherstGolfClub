@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace AmherstGolfClub.Controllers
 {
-    public class MemberInfoController : Controller
+    public class KitchenController : Controller
     {
         private GolfContext db = new GolfContext();
 
