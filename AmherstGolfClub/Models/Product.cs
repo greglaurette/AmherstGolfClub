@@ -18,13 +18,13 @@ namespace AmherstGolfClub.Models
         [Required]        
         public string Price { get; set; }
 
-        
+        [Required]
         public string Quantity { get; set; }
 
         [Required]
         public string SubDepartment { get; set; }
 
-        
+        [Required]
         public string ItemCategory { get; set; }
 
         public IEnumerable<Product> Products { get; set; }
