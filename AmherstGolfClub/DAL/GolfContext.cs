@@ -1,9 +1,5 @@
 ﻿using AmherstGolfClub.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
 
 namespace AmherstGolfClub.DAL
 {
@@ -14,5 +10,9 @@ namespace AmherstGolfClub.DAL
         public DbSet<Rates> Rate { get; set; }
         public DbSet<Tournament> Tournaments { get; set; }
         public DbSet<TournamentPlayers> Players { get; set; }
+
+        public DbSet<EventType> EventTypes { get; set; }
+
+        public DbSet<Events> Events { get; set; }
     }
 }
