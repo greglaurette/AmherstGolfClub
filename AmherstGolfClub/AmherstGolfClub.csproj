@@ -210,45 +210,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201605161719292_InitialCreate.cs" />
-    <Compile Include="Migrations\201605161719292_InitialCreate.Designer.cs">
-      <DependentUpon>201605161719292_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201605312055024_InitialCreate.cs" />
+    <Compile Include="Migrations\201605312055024_InitialCreate.Designer.cs">
+      <DependentUpon>201605312055024_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201605181703166_secondCreate.cs" />
-    <Compile Include="Migrations\201605181703166_secondCreate.Designer.cs">
-      <DependentUpon>201605181703166_secondCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605302142576_addEventType.cs" />
-    <Compile Include="Migrations\201605302142576_addEventType.Designer.cs">
-      <DependentUpon>201605302142576_addEventType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605302229160_addEvents.cs" />
-    <Compile Include="Migrations\201605302229160_addEvents.Designer.cs">
-      <DependentUpon>201605302229160_addEvents.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605302233568_adjustEvents.cs" />
-    <Compile Include="Migrations\201605302233568_adjustEvents.Designer.cs">
-      <DependentUpon>201605302233568_adjustEvents.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605310026202_fixedProducts.cs" />
-    <Compile Include="Migrations\201605310026202_fixedProducts.Designer.cs">
-      <DependentUpon>201605310026202_fixedProducts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605310046468_testingupdate.cs" />
-    <Compile Include="Migrations\201605310046468_testingupdate.Designer.cs">
-      <DependentUpon>201605310046468_testingupdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605310048245_ashdfasi.cs" />
-    <Compile Include="Migrations\201605310048245_ashdfasi.Designer.cs">
-      <DependentUpon>201605310048245_ashdfasi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605310123285_dkska.cs" />
-    <Compile Include="Migrations\201605310123285_dkska.Designer.cs">
-      <DependentUpon>201605310123285_dkska.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605311323103_removedRequired.cs" />
-    <Compile Include="Migrations\201605311323103_removedRequired.Designer.cs">
-      <DependentUpon>201605311323103_removedRequired.cs</DependentUpon>
+    <Compile Include="Migrations\201605312100518_reAdd.cs" />
+    <Compile Include="Migrations\201605312100518_reAdd.Designer.cs">
+      <DependentUpon>201605312100518_reAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -460,35 +428,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201605161719292_InitialCreate.resx">
-      <DependentUpon>201605161719292_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605312055024_InitialCreate.resx">
+      <DependentUpon>201605312055024_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605181703166_secondCreate.resx">
-      <DependentUpon>201605181703166_secondCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605302142576_addEventType.resx">
-      <DependentUpon>201605302142576_addEventType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605302229160_addEvents.resx">
-      <DependentUpon>201605302229160_addEvents.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605302233568_adjustEvents.resx">
-      <DependentUpon>201605302233568_adjustEvents.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605310026202_fixedProducts.resx">
-      <DependentUpon>201605310026202_fixedProducts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605310046468_testingupdate.resx">
-      <DependentUpon>201605310046468_testingupdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605310048245_ashdfasi.resx">
-      <DependentUpon>201605310048245_ashdfasi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605310123285_dkska.resx">
-      <DependentUpon>201605310123285_dkska.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605311323103_removedRequired.resx">
-      <DependentUpon>201605311323103_removedRequired.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605312100518_reAdd.resx">
+      <DependentUpon>201605312100518_reAdd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

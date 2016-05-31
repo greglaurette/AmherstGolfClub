@@ -20,28 +20,28 @@ namespace AmherstGolfClub.Models
         [Required]
         [StringLength(50)]
         [Display(Name = "First Name")]
-        public string FirstName { get; set; }        
+        public string FirstName { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        [Display(Name = "Date of Birth")]
-        public DateTime DateOfBirth { get; set; }
+        //[DataType(DataType.Date)]
+        //[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        //[Display(Name = "Date of Birth")]
+        //public DateTime DateOfBirth { get; set; }
 
-        public string HomeClub { get; set; }
-        [Required]
-        [StringLength(150)]
-        public string Address { get; set; }
-        [Required]
-        [StringLength(50)]
-        public string City { get; set; }
-        [Required]
-        [StringLength(2)]
-        [Column(TypeName = "nchar")]
-        public string Province { get; set; }
-        [Required]
-        [StringLength(7)]
-        [Column(TypeName = "nchar")]
-        public string PostalCode { get; set; }
+        //public string HomeClub { get; set; }
+        //[Required]
+        //[StringLength(150)]
+        //public string Address { get; set; }
+        //[Required]
+        //[StringLength(50)]
+        //public string City { get; set; }
+        //[Required]
+        //[StringLength(2)]
+        //[Column(TypeName = "nchar")]
+        //public string Province { get; set; }
+        //[Required]
+        //[StringLength(7)]
+        //[Column(TypeName = "nchar")]
+        //public string PostalCode { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

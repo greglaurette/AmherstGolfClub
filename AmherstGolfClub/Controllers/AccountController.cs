@@ -156,12 +156,12 @@ namespace AmherstGolfClub.Controllers
                     Email = model.Email,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
-                    Address = model.Address,
-                    City = model.City,
-                    Province = model.Province,
-                    PostalCode = model.PostalCode,
-                    DateOfBirth = model.DateOfBirth,
-                    HomeClub = model.HomeClub
+                    //Address = model.Address,
+                    //City = model.City,
+                    //Province = model.Province,
+                    //PostalCode = model.PostalCode,
+                    //DateOfBirth = model.DateOfBirth,
+                    //HomeClub = model.HomeClub
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

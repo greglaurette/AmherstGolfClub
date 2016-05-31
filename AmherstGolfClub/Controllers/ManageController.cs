@@ -341,12 +341,12 @@ namespace AmherstGolfClub.Controllers
                 return View("Error");
             SavedUser.FirstName = UpdatedUser.FirstName;
             SavedUser.LastName = UpdatedUser.LastName;
-            SavedUser.Address = UpdatedUser.Address;
-            SavedUser.City = UpdatedUser.City;
-            SavedUser.Province = UpdatedUser.Province;
-            SavedUser.PostalCode = UpdatedUser.PostalCode;
-            SavedUser.HomeClub = UpdatedUser.HomeClub;
-            SavedUser.DateOfBirth = UpdatedUser.DateOfBirth;
+            //SavedUser.Address = UpdatedUser.Address;
+            //SavedUser.City = UpdatedUser.City;
+            //SavedUser.Province = UpdatedUser.Province;
+            //SavedUser.PostalCode = UpdatedUser.PostalCode;
+            //SavedUser.HomeClub = UpdatedUser.HomeClub;
+            //SavedUser.DateOfBirth = UpdatedUser.DateOfBirth;
 
             UserManager.Update(SavedUser);
 

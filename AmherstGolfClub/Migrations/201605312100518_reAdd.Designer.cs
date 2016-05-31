@@ -7,13 +7,13 @@ namespace AmherstGolfClub.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addEventType : IMigrationMetadata
+    public sealed partial class reAdd : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addEventType));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(reAdd));
         
         string IMigrationMetadata.Id
         {
-            get { return "201605302142576_addEventType"; }
+            get { return "201605312100518_reAdd"; }
         }
         
         string IMigrationMetadata.Source

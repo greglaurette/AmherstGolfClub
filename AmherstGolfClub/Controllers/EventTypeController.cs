@@ -11,6 +11,7 @@ using AmherstGolfClub.Models;
 
 namespace AmherstGolfClub.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class EventTypeController : Controller
     {
         private GolfContext db = new GolfContext();

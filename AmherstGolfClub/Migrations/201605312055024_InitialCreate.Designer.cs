@@ -13,7 +13,7 @@ namespace AmherstGolfClub.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201605161719292_InitialCreate"; }
+            get { return "201605312055024_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source
