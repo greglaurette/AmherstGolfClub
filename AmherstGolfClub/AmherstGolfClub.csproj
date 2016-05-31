@@ -246,6 +246,10 @@
     <Compile Include="Migrations\201605310123285_dkska.Designer.cs">
       <DependentUpon>201605310123285_dkska.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605311323103_removedRequired.cs" />
+    <Compile Include="Migrations\201605311323103_removedRequired.Designer.cs">
+      <DependentUpon>201605311323103_removedRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CanadianProvinces.cs" />
@@ -482,6 +486,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605310123285_dkska.resx">
       <DependentUpon>201605310123285_dkska.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605311323103_removedRequired.resx">
+      <DependentUpon>201605311323103_removedRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
