@@ -39,13 +39,13 @@ namespace AmherstGolfClub.Controllers
                     var csv = new CsvReader(new StreamReader(path));
                     var db = new GolfContext();
                     db.Database.ExecuteSqlCommand("delete from products");
-                    db.Database.ExecuteSqlCommand("DBCC CHECKIDENT ('[products]', RESEED, 1);");
-                    int count = 1;
+                    db.Database.ExecuteSqlCommand("DBCC CHECKIDENT ('[products]', RESEED, 0);");
+                    int count = 0;
                     
                     while (csv.Read())
                     {
                         Product product = new Product();
-                        product.ProductID = count;                     
+                        product.ProductID =+ 1;              
                         product.Name = csv.GetField<string>(0);                        
                         product.Price = csv.GetField<string>(2);
                         product.Quantity = csv.GetField<string>(3);
