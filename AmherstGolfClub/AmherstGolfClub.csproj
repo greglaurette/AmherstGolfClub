@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -73,6 +74,10 @@
     </Reference>
     <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -196,8 +201,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\EventsController.cs" />
-    <Compile Include="Controllers\EventTypeController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KitchenController.cs" />
@@ -210,12 +213,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605161719292_InitialCreate.cs" />
+    <Compile Include="Migrations\201605161719292_InitialCreate.Designer.cs">
+      <DependentUpon>201605161719292_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605181703166_secondCreate.cs" />
+    <Compile Include="Migrations\201605181703166_secondCreate.Designer.cs">
+      <DependentUpon>201605181703166_secondCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CanadianProvinces.cs" />
     <Compile Include="Models\ContactForm.cs" />
-    <Compile Include="Models\Events.cs" />
-    <Compile Include="Models\EventType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Product.cs" />
@@ -249,67 +258,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="images\011.jpg" />
-    <Content Include="images\015.jpg" />
-    <Content Include="images\035.jpg" />
-    <Content Include="images\039.jpg" />
-    <Content Include="images\1.jpg" />
-    <Content Include="images\100_0271_resized.jpg" />
-    <Content Include="images\100_0272_resized.jpg" />
-    <Content Include="images\100_0273_resized.jpg" />
-    <Content Include="images\100_0274_resized.jpg" />
-    <Content Include="images\100_0275_resized.jpg" />
-    <Content Include="images\121_4eb80ffc26a61.jpg" />
-    <Content Include="images\249_4eb80c178ac49.jpg" />
-    <Content Include="images\4e71fbe04ec1a.jpg" />
-    <Content Include="images\4e7228715a79c.jpg" />
-    <Content Include="images\4e7a2e4d4390d.jpg" />
-    <Content Include="images\4e7b8565548a8.jpg" />
-    <Content Include="images\4e7c8a8edd705.jpg" />
-    <Content Include="images\4e81f78836ca3.jpg" />
-    <Content Include="images\4e81f7a358bd9.jpg" />
-    <Content Include="images\4e82044f1719a.jpg" />
-    <Content Include="images\4e8207bc71b02.jpg" />
-    <Content Include="images\4e8208dc9b3ad.jpg" />
-    <Content Include="images\4e85e082b051e.jpg" />
-    <Content Include="images\4e8c6cb98e1d5.jpg" />
-    <Content Include="images\4e8c88100f39d.jpg" />
-    <Content Include="images\4e8dae5ea6944.jpg" />
-    <Content Include="images\4e8dc9f806385.jpg" />
-    <Content Include="images\4e8de727b701d.jpg" />
-    <Content Include="images\4e8de9d37214d.jpg" />
-    <Content Include="images\4eca8eb39a1ce.jpg" />
-    <Content Include="images\callaway_80x30.jpg" />
-    <Content Include="images\course_logo.png" />
-    <Content Include="images\course_logo180x60.jpg" />
-    <Content Include="images\membership-at-amherst.jpg" />
-    <Content Include="images\michael-archibald.jpg" />
-    <Content Include="images\nike_80x30.jpg" />
-    <Content Include="images\nsMap.jpg" />
-    <Content Include="images\proshop1.jpg" />
-    <Content Include="images\proshop2.jpg" />
-    <Content Include="images\proshop3.jpg" />
-    <Content Include="images\proshop4.jpg" />
-    <Content Include="images\proshop5.jpg" />
-    <Content Include="images\proshop_ad.jpg" />
-    <Content Include="images\slide1.jpg" />
-    <Content Include="images\slide2.jpg" />
-    <Content Include="images\slide3.jpg" />
-    <Content Include="images\slide4.jpg" />
-    <Content Include="images\slide5.jpg" />
-    <Content Include="images\slide6.jpg" />
-    <Content Include="images\slide7.jpg" />
-    <Content Include="images\slide8.jpg" />
-    <Content Include="images\titleist_80x30.jpg" />
-    <Content Include="images\tournament-at-amherst.jpg" />
-    <Content Include="images\wannamaker-trophy_t620.jpg" />
-    <Content Include="images\wannamaker.jpg" />
-    <Content Include="images\weddin3.jpg" />
-    <Content Include="images\weddin5.jpg" />
-    <Content Include="images\wedding 2.jpg" />
-    <Content Include="images\wedding 6.jpg" />
-    <Content Include="images\wedding4.jpg" />
-    <Content Include="images\weddings-at-amherst.jpg" />
     <Content Include="mstile-150x150.png" />
     <Content Include="mstile-310x150.png" />
     <Content Include="mstile-70x70.png" />
@@ -324,7 +272,6 @@
     <Content Include="manifest.json" />
     <Content Include="PDF\amherst_golf_club_by_laws.pdf" />
     <Content Include="PDF\amherst-member-manual.pdf" />
-    <None Include="Properties\PublishProfiles\hdyfgiufujk.glaurette.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -394,20 +341,10 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Home\Success.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
-    <Content Include="Views\EventType\Create.cshtml" />
-    <Content Include="Views\EventType\Delete.cshtml" />
-    <Content Include="Views\EventType\Details.cshtml" />
-    <Content Include="Views\EventType\Edit.cshtml" />
-    <Content Include="Views\EventType\Index.cshtml" />
-    <Content Include="Views\Events\Create.cshtml" />
-    <Content Include="Views\Events\Delete.cshtml" />
-    <Content Include="Views\Events\Details.cshtml" />
-    <Content Include="Views\Events\Edit.cshtml" />
-    <Content Include="Views\Events\Index.cshtml" />
-    <Content Include="Views\Admin\ProShopUpdate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="images\" />
     <Folder Include="TournyFiles\" />
     <Folder Include="upload\" />
   </ItemGroup>
@@ -418,6 +355,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201605161719292_InitialCreate.resx">
+      <DependentUpon>201605161719292_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605181703166_secondCreate.resx">
+      <DependentUpon>201605181703166_secondCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -452,6 +397,7 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

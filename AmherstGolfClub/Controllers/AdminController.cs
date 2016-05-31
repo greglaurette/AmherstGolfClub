@@ -38,17 +38,14 @@ namespace AmherstGolfClub.Controllers
 
                     var csv = new CsvReader(new StreamReader(path));
                     var db = new GolfContext();
-                    db.Database.ExecuteSqlCommand("delete from products");
-                    db.Database.ExecuteSqlCommand("DBCC CHECKIDENT ('[products]', RESEED, 0);");
                     int count = 0;
-                    
                     while (csv.Read())
                     {
                         Product product = new Product();
-                        product.ProductID =+ 1;              
-                        product.Name = csv.GetField<string>(0);                        
-                        product.Price = csv.GetField<string>(2);
-                        product.Quantity = csv.GetField<string>(3);
+                        product.Name = csv.GetField<string>(0);
+                        product.ProductID = int.Parse(csv.GetField<string>(1));
+                        product.Price = decimal.Parse(csv.GetField<string>(2));
+                        product.Quantity = int.Parse(csv.GetField<string>(3));
                         product.SubDepartment = csv.GetField<string>(7);
                         product.ItemCategory = csv.GetField<string>(8);                        
                         ProductsToDisplay.Add(product);
@@ -58,7 +55,7 @@ namespace AmherstGolfClub.Controllers
                             db.Products.Add(product);
                             db.SaveChanges();
                             count += 1;
-                        }                        
+                        }
                     }
                     ViewBag.RecordsUploaded = ProductsToDisplay.Count();
                     ViewBag.RecordsSaved = count;

@@ -8,25 +8,24 @@ namespace AmherstGolfClub.Models
 {
     public class Product
     {
+        [Required]
+        [StringLength(60)]
+        public string Name { get; set; }
 
+        [Required]
         public int ProductID { get; set; }
 
         [Required]
-        [StringLength(60)]
-        public string Name { get; set; }               
-
-        [Required]        
-        public string Price { get; set; }
+        [DataType(DataType.Currency)]
+        public decimal Price { get; set; }
 
         [Required]
-        public string Quantity { get; set; }
+        public int Quantity { get; set; }
 
         [Required]
         public string SubDepartment { get; set; }
 
         [Required]
         public string ItemCategory { get; set; }
-
-        public IEnumerable<Product> Products { get; set; }
     }
 }
